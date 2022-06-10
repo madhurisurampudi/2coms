@@ -9,6 +9,7 @@ public class NewApp {
 		
 		System.out.print("im commiting to GitHub ");
 		
+		System.out.print("again commititng and pushing to github");
 		
 	}
 
