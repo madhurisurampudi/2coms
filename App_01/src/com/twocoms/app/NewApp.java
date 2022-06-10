@@ -6,6 +6,10 @@ public class NewApp {
 		// TODO Auto-generated method stub
 		
 		System.out.print("Welcome to GitHub ");
+		
+		System.out.print("im commiting to GitHub ");
+		
+		
 	}
 
 }
