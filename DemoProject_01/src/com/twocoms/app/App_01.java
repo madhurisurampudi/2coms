@@ -7,6 +7,8 @@ public class App_01 {
 		System.out.print("Welcome to GitHub....!");
 		
 		System.out.print("Inside of GitHub ");
+		
+		System.out.print("Close of GitHub");
 	}
 
 }
