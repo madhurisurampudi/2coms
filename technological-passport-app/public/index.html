@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technological Passport - Process Sheet</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="header-left">
+                <div class="date-field">
+                    <label>Date:</label>
+                    <span id="current-date">06-Oct-2021</span>
+                </div>
+                <div class="main-title">
+                    <h1>Technological Passport for Assembly</h1>
+                </div>
+                <div class="article-info">
+                    <label>Article No.:</label>
+                    <span id="article-number">CK310__101__INV101__2001</span>
+                </div>
+                <div class="serial-info">
+                    <label>Assembly / Hardware Factory Serial Number:</label>
+                    <span id="serial-number">K310-0200-100</span>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <table class="info-table">
+                    <tr>
+                        <td>Sheet</td>
+                        <td id="current-sheet">1</td>
+                    </tr>
+                    <tr>
+                        <td>Sheets</td>
+                        <td id="total-sheets">20</td>
+                    </tr>
+                    <tr>
+                        <td>Inv No.</td>
+                        <td id="inv-number">INV101</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Mid-Upper Section -->
+        <div class="mid-section">
+            <div class="mid-left">
+                <span>Article No: <span id="article-number-repeat">CK310__101__INV101__2001</span></span>
+            </div>
+            <div class="mid-center">
+                <span>Date: <span id="date-field"></span></span>
+            </div>
+            <div class="mid-right">
+                <span>Total Sheets: <span id="total-sheets-repeat">20</span></span>
+            </div>
+        </div>
+
+        <!-- Central Title Section -->
+        <div class="central-title">
+            <h2 class="main-passport-title">Technological Passport - Process Sheet</h2>
+            <h3 class="assembly-title">For: <span id="assembly-name">CK310 Assembly</span></h3>
+            <h4 class="unit-title">Assembly / Manufacturing Unit SI.No. <span id="unit-serial">CK310 101</span></h4>
+        </div>
+
+        <!-- Form Fields Section -->
+        <div class="form-section">
+            <div class="form-group">
+                <label for="passport-id">Passport ID:</label>
+                <input type="text" id="passport-id" name="passportId" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="assembly-type">Assembly Type:</label>
+                <input type="text" id="assembly-type" name="assemblyType" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="manufacturing-date">Manufacturing Date:</label>
+                <input type="date" id="manufacturing-date" name="manufacturingDate" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="quality-status">Quality Status:</label>
+                <input type="text" id="quality-status" name="qualityStatus" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="inspector-name">Inspector Name:</label>
+                <input type="text" id="inspector-name" name="inspectorName" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <div class="signature-left">
+                <div class="signature-label">Checked By</div>
+                <div class="signature-name" id="checked-by">Mr DeshPandian</div>
+            </div>
+            <div class="signature-right">
+                <div class="signature-label">Authorized By</div>
+                <div class="signature-name" id="authorized-by">Mr Sarala</div>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="control-buttons">
+            <button id="load-data-btn" class="btn btn-primary">Load Passport Data</button>
+            <button id="refresh-btn" class="btn btn-secondary">Refresh</button>
+            <button id="print-btn" class="btn btn-success">Print</button>
+        </div>
+    </div>
+
+    <script src="src/services/api.js"></script>
+    <script src="src/components/passport-form.js"></script>
+</body>
+</html>
