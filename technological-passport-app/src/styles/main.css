@@ -1,0 +1,314 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.date-field {
+    margin-bottom: 10px;
+}
+
+.date-field label {
+    font-weight: bold;
+}
+
+.main-title h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.article-info, .serial-info {
+    margin: 5px 0;
+}
+
+.article-info label, .serial-info label {
+    font-weight: bold;
+}
+
+.header-right {
+    margin-left: 20px;
+}
+
+.info-table {
+    border-collapse: collapse;
+    width: 120px;
+}
+
+.info-table td {
+    border: 1px solid #000;
+    padding: 5px 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.info-table td:first-child {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Mid Section */
+.mid-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.mid-left, .mid-center, .mid-right {
+    font-size: 14px;
+}
+
+.mid-center {
+    text-align: center;
+}
+
+/* Central Title Section */
+.central-title {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    border: 2px solid #000;
+    background-color: #f9f9f9;
+}
+
+.main-passport-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.assembly-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.unit-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.form-group input[readonly],
+.form-group textarea[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Footer Section */
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #000;
+}
+
+.signature-left, .signature-right {
+    text-align: center;
+    width: 200px;
+}
+
+.signature-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.signature-name {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    min-height: 30px;
+}
+
+/* Control Buttons */
+.control-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "Loading...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+/* Print Styles */
+@media print {
+    .container {
+        box-shadow: none;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .control-buttons {
+        display: none;
+    }
+    
+    .form-section {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .btn {
+        display: none;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header-section {
+        flex-direction: column;
+    }
+    
+    .header-right {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .mid-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
